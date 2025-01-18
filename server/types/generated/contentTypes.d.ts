@@ -372,6 +372,7 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiHeroHero extends Struct.CollectionTypeSchema {
   collectionName: 'heroes';
   info: {
+    description: '';
     displayName: 'Hero';
     pluralName: 'heroes';
     singularName: 'hero';
@@ -390,7 +391,6 @@ export interface ApiHeroHero extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.UID<'name'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

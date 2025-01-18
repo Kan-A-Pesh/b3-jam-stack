@@ -4,7 +4,8 @@
   "info": {
     "singularName": "hero",
     "pluralName": "heroes",
-    "displayName": "Hero"
+    "displayName": "Hero",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,19 +15,16 @@
     "name": {
       "type": "string"
     },
-    "slug": {
-      "type": "uid",
-      "targetField": "name"
-    },
     "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "description": {
       "type": "blocks"
